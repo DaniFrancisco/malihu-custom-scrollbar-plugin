@@ -1290,6 +1290,10 @@ and dependencies (minified).
 				});
 			}
 			function _onTouchstart(e){
+                if($(e.target).is('[class^="item-carousel-bloc"]')) {
+                    return;
+                }
+			    
 				if(!_pointerTouch(e) || touchActive || _coordinates(e)[2]){touchable=0; return;}
 				touchable=1; touchDrag=0; docDrag=0; draggable=1;
 				$this.removeClass("mCS_touch_action");
@@ -1299,6 +1303,10 @@ and dependencies (minified).
 				touchIntent=[_coordinates(e)[0],_coordinates(e)[1]];
 			}
 			function _onTouchmove(e){
+                if($(e.target).is('[class^="item-carousel-bloc"]')) {
+                    return;
+                }
+			    
 				if(!_pointerTouch(e) || touchActive || _coordinates(e)[2]){return;}
 				if(!o.documentTouchScroll){e.preventDefault();} 
 				e.stopImmediatePropagation();
@@ -1333,6 +1341,10 @@ and dependencies (minified).
 				}
 			}
 			function _onTouchstart2(e){
+                if($(e.target).is('[class^="item-carousel-bloc"]')) {
+                    return;
+                }
+			    
 				if(!_pointerTouch(e) || touchActive || _coordinates(e)[2]){touchable=0; return;}
 				touchable=1;
 				e.stopImmediatePropagation();
@@ -1344,6 +1356,10 @@ and dependencies (minified).
 				touchMoveY=[]; touchMoveX=[];
 			}
 			function _onTouchend(e){
+                if($(e.target).is('[class^="item-carousel-bloc"]')) {
+                    return;
+                }
+			    
 				if(!_pointerTouch(e) || touchActive || _coordinates(e)[2]){return;}
 				draggable=0;
 				e.stopImmediatePropagation();
